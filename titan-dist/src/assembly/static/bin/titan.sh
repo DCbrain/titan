@@ -174,7 +174,7 @@ kill_class() {
     echo "Killing $1 (pid $p)..." >&2
     case "`uname`" in
         CYGWIN*) taskkill /F /PID "$p" ;;
-        *)       kill "$p" ;;
+        *)       kill ${p} ;;
     esac
 }
 
